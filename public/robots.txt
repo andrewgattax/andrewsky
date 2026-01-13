@@ -1,0 +1,21 @@
+# robots.txt for QueueR Landing Page
+# Allow all crawlers to index everything
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://queuer.com/sitemap.xml
+
+# Common bot-specific rules (optional but good practice)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay to be respectful (optional)
+# Crawl-delay: 1
