@@ -40,6 +40,29 @@
             "description": "High resolution 4K."
         }
     },
+    "fpvFeature": {
+        "title": "Cinematic FPV Footage",
+        "description": "Immersive and dynamic aerial shots that capture the essence of speed and motion. Perfect for automotive, sports, and storytelling that requires a unique perspective.",
+        "cta": "Watch Showreel",
+        "stats": {
+            "value": "150+",
+            "label": "Km/h Top Speed."
+        }
+    },
+    "fpvFeatures": {
+        "dynamic": {
+            "title": "Dynamic",
+            "description": "Fast-paced action shots."
+        },
+        "immersive": {
+            "title": "Immersive",
+            "description": "Fly-through experiences."
+        },
+        "cinematic": {
+            "title": "Cinematic",
+            "description": "Smooth 5.1K Video."
+        }
+    },
     "services": {
         "industrial": {
             "title": "Industrial Inspections",

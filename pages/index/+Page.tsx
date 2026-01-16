@@ -1,6 +1,6 @@
 import '@/i18n';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, Settings, Video, Sprout, MapPin, Cloud, Box } from 'lucide-react';
+import { ArrowRight, Settings, Video, Sprout, MapPin, Cloud, Box, Wind, Zap, Film } from 'lucide-react';
 import { ServiceCard } from '@/components/custom/ServiceCard';
 import { FeatureInfoCard } from '@/components/custom/FeatureInfoCard';
 import { StatsCard } from '@/components/custom/StatsCard';
@@ -47,6 +47,24 @@ export default function LandingPage() {
       icon: Box,
       title: t('features.3dmodels.title'),
       description: t('features.3dmodels.description')
+    },
+  ];
+
+  const fpvFeatureInfos = [
+    {
+      icon: Zap,
+      title: t('fpvFeatures.dynamic.title'),
+      description: t('fpvFeatures.dynamic.description')
+    },
+    {
+      icon: Wind,
+      title: t('fpvFeatures.immersive.title'),
+      description: t('fpvFeatures.immersive.description')
+    },
+    {
+      icon: Film,
+      title: t('fpvFeatures.cinematic.title'),
+      description: t('fpvFeatures.cinematic.description')
     },
   ];
 
@@ -126,8 +144,49 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* TextGrid: Other Services */}
+      {/* FeatureSection: FPV (White Variant, Flipped) */}
       <section className="bg-white dark:bg-background-dark py-24">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Text Column (Right on Desktop) */}
+            <div className="flex flex-col gap-8 lg:order-2">
+              <div>
+                <h2 className="text-4xl font-black tracking-tight mb-4 text-slate-900 dark:text-white">
+                  {t('fpvFeature.title')}
+                </h2>
+                <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                  {t('fpvFeature.description')}
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {fpvFeatureInfos.map((feature, index) => (
+                  <FeatureInfoCard
+                    key={index}
+                    icon={feature.icon}
+                    title={feature.title}
+                    description={feature.description}
+                  />
+                ))}
+              </div>
+              <a
+                href="#fpv"
+                className="bg-primary hover:bg-primary/90 text-white w-fit px-8 py-3 rounded-lg text-sm font-bold transition-all shadow-md"
+              >
+                {t('fpvFeature.cta')}
+              </a>
+            </div>
+
+            {/* Image Column (Left on Desktop) */}
+            <div className="relative lg:order-1">
+              <div className="w-full aspect-[4/3] rounded-2xl bg-gradient-to-br from-secondary/20 to-primary/20 shadow-2xl border-8 border-slate-50 dark:border-slate-800" />
+              <StatsCard value={t('fpvFeature.stats.value')} label={t('fpvFeature.stats.label')} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TextGrid: Other Services */}
+      <section className="bg-soft-grey dark:bg-slate-900/50 py-24">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -145,7 +204,7 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="bg-soft-grey dark:bg-background-dark py-20 px-6 lg:px-10">
+      <section id="contact" className="bg-white dark:bg-background-dark py-20 px-6 lg:px-10">
         <div className="max-w-[960px] mx-auto text-center bg-white dark:bg-slate-900 p-12 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-800">
           <h2 className="text-3xl lg:text-4xl font-black mb-6 text-slate-900 dark:text-white">
             {t('cta.title')}

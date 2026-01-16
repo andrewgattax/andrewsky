@@ -16,7 +16,7 @@ export default {
   title: 'QueueR - Home',
 
   htmlAttributes: {
-    class: "dark"
+    class: ""
   },
 
   // Optional: Configure meta tags

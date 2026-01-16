@@ -40,6 +40,29 @@
             "description": "Alta risoluzione 4K."
         }
     },
+    "fpvFeature": {
+        "title": "Riprese FPV Cinematiche",
+        "description": "Riprese aeree immersive e dinamiche che catturano l'essenza della velocità e del movimento. Ideali per automotive, sport e storytelling che richiede una prospettiva unica.",
+        "cta": "Guarda Showreel",
+        "stats": {
+            "value": "150+",
+            "label": "Km/h Velocità Max."
+        }
+    },
+    "fpvFeatures": {
+        "dynamic": {
+            "title": "Dinamico",
+            "description": "Riprese d'azione veloci."
+        },
+        "immersive": {
+            "title": "Immersivo",
+            "description": "Esperienze fly-through."
+        },
+        "cinematic": {
+            "title": "Cinematografico",
+            "description": "Video fluido in 5.1K."
+        }
+    },
     "services": {
         "industrial": {
             "title": "Ispezioni Industriali",
